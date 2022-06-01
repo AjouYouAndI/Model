@@ -1,0 +1,8 @@
+*.pt
+*.tar
+*.pth
+*.bpe
+
+__pycache__/
+
+weights/
