@@ -130,8 +130,8 @@ def hello():
 
 @app.route('/predict')
 def predict_read():
-    params = request.get_json()
-    sentence = params['string']
+    sentence = request.args.get('string')
+    print(sentence)
     res = predict(sentence)
     return jsonify({'res': res})
 
