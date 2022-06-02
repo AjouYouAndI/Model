@@ -131,9 +131,7 @@ def hello():
 @app.route('/predict')
 def predict_read():
     sentence = request.args.get('string')
-    print(sentence)
-    res = predict(sentence)
-    return jsonify({'res': res})
+    return str(predict(sentence))
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0',port=8000)
